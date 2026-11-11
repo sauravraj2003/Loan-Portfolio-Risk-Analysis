@@ -1,11 +1,3 @@
--- =============================================================================
--- FILE       : 01_schema_setup.sql
--- PROJECT    : Loan Portfolio Risk Analysis
--- AUTHOR     : Saurav Raj
--- DESCRIPTION: Creates the database schema and loads the financial_loan dataset.
---              Run this file first before executing any other SQL scripts.
--- =============================================================================
-
 -- ----------------------------------------------------------------------------
 -- 1. DATABASE SETUP
 -- ----------------------------------------------------------------------------
@@ -57,20 +49,12 @@ CREATE TABLE financial_loan (
   COMMENT='LendingClub loan portfolio data — 38,576 records (2021)';
 
 
--- ----------------------------------------------------------------------------
--- 3. DATA LOAD
--- NOTE: Update the file path below to match your local environment.
---       MySQL must have FILE privilege and secure_file_priv must allow the path.
---       Alternatively, import via MySQL Workbench: Table Data Import Wizard.
--- ----------------------------------------------------------------------------
-
-/*
-LOAD DATA INFILE '/path/to/financial_loan.csv'
+LOAD DATA INFILE 'financial_loan.csv'
 INTO TABLE financial_loan
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 ROWS                          -- skip header row
+IGNORE 1 ROWS                          
 (
     id, address_state, application_type, emp_length, emp_title, grade,
     home_ownership,
@@ -85,13 +69,11 @@ SET
     last_credit_pull_date = STR_TO_DATE(@last_credit_pull_date, '%d-%m-%Y'),
     last_payment_date     = STR_TO_DATE(@last_payment_date,     '%d-%m-%Y'),
     next_payment_date     = NULLIF(STR_TO_DATE(@next_payment_date, '%d-%m-%Y'), '0000-00-00');
-*/
 
 
 -- ----------------------------------------------------------------------------
 -- 4. QUICK SANITY CHECK
 -- ----------------------------------------------------------------------------
--- Run after loading data to verify row count and column completeness.
 
 SELECT
     COUNT(*)                                          AS total_rows,
