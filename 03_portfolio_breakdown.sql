@@ -1,12 +1,3 @@
--- =============================================================================
--- FILE       : 03_portfolio_breakdown.sql
--- PROJECT    : Loan Portfolio Risk Analysis
--- DESCRIPTION: Segmentation analysis — breaks the portfolio into every major
---              dimension to answer: "Where is our exposure concentrated?"
---              Covers: Grade, Sub-Grade, Purpose, State, Term,
---              Employment Length, Home Ownership, Verification Status.
--- =============================================================================
-
 USE loan_portfolio_db;
 
 -- ─────────────────────────────────────────────────────────────────────────────
