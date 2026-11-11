@@ -1,12 +1,3 @@
--- =============================================================================
--- FILE       : 04_risk_analysis.sql
--- PROJECT    : Loan Portfolio Risk Analysis
--- DESCRIPTION: Credit risk deep-dive — the analytical core of the project.
---              Covers Loss Given Default (LGD), DTI risk segmentation,
---              multi-factor risk profiling, and cross-segment risk matrices.
---              These queries answer: "How much are we losing, and who is losing it?"
--- =============================================================================
-
 USE loan_portfolio_db;
 
 -- ─────────────────────────────────────────────────────────────────────────────
