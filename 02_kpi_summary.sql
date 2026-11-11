@@ -1,11 +1,3 @@
--- =============================================================================
--- FILE       : 02_kpi_summary.sql
--- PROJECT    : Loan Portfolio Risk Analysis
--- DESCRIPTION: Executive-level KPI dashboard queries.
---              Answers the board-level question: "How is our loan book performing?"
---              Covers total portfolio metrics, good vs. bad loan split,
---              and key rate indicators.
--- =============================================================================
 
 USE loan_portfolio_db;
 
