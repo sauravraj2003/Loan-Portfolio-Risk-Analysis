@@ -1,11 +1,3 @@
--- =============================================================================
--- FILE       : 05_time_series.sql
--- PROJECT    : Loan Portfolio Risk Analysis
--- DESCRIPTION: Temporal trend analysis — tracks how portfolio volume, quality,
---              and risk evolve month-over-month.
---              Answers: "Is the book growing? Are conditions improving or worsening?"
---              Uses LAG() for period-over-period comparisons.
--- =============================================================================
 
 USE loan_portfolio_db;
 
